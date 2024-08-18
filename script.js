@@ -103,5 +103,14 @@ function removeHighlights(paragraphs) {
 paragraphs.forEach(p => {
 p.innerHTML = p.innerHTML.replace(/<mark class="highlight">|<\/mark>/g, '');
 });
+  
+}window.onload = function() {
+let url = window.location.href;
+if (url.indexOf("#") > -1) {
+let id = url.split("#")[1];
+let element = document.getElementById(id);
+if (element) {
+element.scrollIntoView();
 }
-window.title = "Certify";
+}
+}
