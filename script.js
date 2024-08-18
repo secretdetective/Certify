@@ -104,3 +104,4 @@ paragraphs.forEach(p => {
 p.innerHTML = p.innerHTML.replace(/<mark class="highlight">|<\/mark>/g, '');
 });
 }
+window.title = "Certify";
