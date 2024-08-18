@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+    p {
+    color: #555;
+    }
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    color: #fff;
+    padding: 1.4em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1em;
+}
+
+#menu-icon {
+    display: none;
+  /* cursor: pointer;*/
+}
+
+main {
+    padding: 30px;
+    animation: slideIn 1s forwards ease-in;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu.show {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    nav a {
+        margin-bottom: 0.5em;
+    }
+}
+marquee {
+  font-family: cursive;
+}
+img{
+  width: 2.4em;
+  height: 2.4em;
+  border-radius: 2.4em;
+}
+.start{
+  background-color: #444;
+    color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
+}
+.star{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 22px;
+    margin-left: 5px;
+}
+</style>    
+<title>About Us</title>
+</head>
+<body>
+<div class="start">
+ <img src="logo.jpg" alt="logo">
+ <h3 class="star">Certify</h3>
+</div>
+    <header>
+        <h1 id="head"></h1>
+    </header>
+
+   <nav>
+     <marquee>At Certify, we understand that every achievement deserves recognition. We are passionate about helping you celebrate success and share accomplishments with the world. Thank you for choosing Certify as your certificate generation partner.
+        </marquee>
+    </nav><br>
+
+    <main>
+      
+        <h3>About Us</h3>
+        <p>Welcome to Certify, your trusted partner in certificate generation. At Certify, we believe in the power of recognition and the importance of celebrating achievements. Our platform is dedicated to providing a seamless and efficient way to create, customize, and distribute professional certificates, ensuring all information is verified for authenticity.</p> <hr><br>
+        <h3>Our Mission</h3>
+        <p>Our mission is to empower individuals and organizations by simplifying the certificate creation process while maintaining the highest standards of accuracy and authenticity. We aim to provide a user-friendly platform that ensures every certificate issued is a true reflection of the achievements it celebrates.</p><hr><br>
+        <h3>What We Offer</h3>
+        <p><i>Easy Certificate Creation:</i> With Certify, you can create high-quality certificates in just a few clicks. Our intuitive design tool would create an outstanding and well designed certificate.<br><br> <i>Template Availability:</i> Currently, we offer a single, professionally designed template that suits a variety of occasions, from academic achievements to professional training.<br><br><i>Verification Process:</i> Upon registration, a preliminary certificate is issued. After the information provided is verified, a stamped certificate is sent directly to the user's email inbox, ensuring the authenticity and recognition of the achievement.</p><hr><br>
+        <h3>Why Choose Us</h3>
+        <p>
+          <i>User-Friendly Platform:</i> Our platform is designed with you in mind. We prioritize ease of use and accessibility, ensuring that even those with minimal technical skills can create a stunning certificate.<br><br>
+        <i>Commitment to Quality and Accuracy:</i> We are committed to delivering high-quality certificates that meet your standards and are backed by our verification process.<br><br>
+        <i>Exceptional Support:</i> Our dedicated support team is here to assist you every step of the way. From technical support to verification inquiries, we're here to help you succeed.</p><br>
+        </p><br>
+    </main>
+
+    <footer>
+        &copy; 2024 Certify - All Rights Reserved 
+    </footer>
+
+   <script>
+     function writeText(text){
+       let index = 0;
+       function writeNextLetter(){
+         if(index < text.length){
+           document.getElementById('head').innerHTML += text.charAt(index);
+            index++;
+         } else{
+           clearInterval(interval);
+         }
+       }
+       let interval = setInterval(writeNextLetter, 95);
+     }
+     writeText('GET TO KNOW US MORE');
+   </script>
+
+</body>
+</html>
