@@ -840,25 +840,25 @@ const database = [
   
     doc.setFont('helvetica');
   
-    // Title
+    
     doc.setFontSize(30);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(184, 134, 11);
     doc.text(`${institution.toUpperCase()}`, doc.internal.pageSize.getWidth() / 2, 40, { align: 'center' });
   
-    // Subtitle
+    
     doc.setFontSize(20);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
     doc.text('Certificate of Completion', doc.internal.pageSize.getWidth() / 2, 60, { align: 'center' });
   
-    // Name
+    
     doc.setFontSize(20);
     doc.setFont('helvetica');
     doc.setTextColor(0, 51, 102);
     doc.text(`${name}`, doc.internal.pageSize.getWidth() / 2, 80, { align: 'center' });
   
-    // Reg Number
+   
     doc.setFontSize(15);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(128, 128, 128);
@@ -871,25 +871,25 @@ const database = [
   doc.internal.pageSize.getWidth() / 2 + 90,95
 );
 
-    // Text
+    
     doc.setFontSize(18);
-    doc.setFont('normal', 'normal');
+    doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
     doc.text(`Completed the approved course of study and fulfilled all the prescribed conditions in the degree program. B.Sc ${department}`, doc.internal.pageSize.getWidth() / 2, 110, { align: 'center', maxWidth: 250 });
   
-    // CGPA and Grade
+    
     doc.setFontSize(17);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
     doc.text(`And has earned a CGPA of ${cgpa.toFixed(2)} (${grade}) in the course`, doc.internal.pageSize.getWidth() / 2, 130, { align: 'center' });
   
-    // Course
+    
     doc.setFontSize(20);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
     doc.text(`B.Sc ${department}`, doc.internal.pageSize.getWidth() / 2, 140, { align: 'center' });
   
-    // Institution and RegNo
+
     doc.setFontSize(14);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
