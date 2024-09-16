@@ -13,7 +13,7 @@
     <img src="logo.jpg" alt="certify_logo">
     <h1>Certificate Generation Form For Certify</h1>
     <hr>
-    <small class="fill">Please fill out the fields below</small><br><br><br><br>
+    <small class="fill" id="head"></small><br><br><br><br>
     <form id="registration-form" action="https://formspree.io/f/xleqkzrr" method="POST">
       <label for="name">Name:</label>
       <input type="text" name="Name" required><br>
@@ -34,23 +34,49 @@
         Remember to read <br>our <br><a class="sign" href="terms.html">Terms & Conditions</a>
       </p>
       <input type="submit" value="Register" class="btn">
-      <!-- spinner -->
       <div class="spinner" id="spinner"></div>
     </form>
-  </div>
-  <marquee>Please let the information provided in the form above be true to the best of your understanding, any falsification or forging of information which is against our standards & community would be disregarded. Thanks for your understanding...</marquee>
 
-  
+    <div id="idModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="idModalClose">&times;</span>
+        <p>Your unique ID is: <span id="userId"></span></p>
+        <button id="continueButton">Continue</button>
+      </div>
+    </div>
+
+    <div id="verifyModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="verifyModalClose">&times;</span>
+        <form id="idVerificationForm">
+          <label for="enteredId">Enter your ID:</label>
+          <input type="text" id="enteredId" name="enteredId" required placeholder="Enter ID">
+          <p>Don't have an ID? <a href="#" id="getIdLink">Click here</a></p>
+          <button type="submit" class="idSubmit">Submit</button>
+          
+
+<div id="regInput" style="display:none;"><br><hr><br>
+  <label for="regNumber">Enter your Reg Number:</label><br><br>
+  <input type="text" id="regNumber" placeholder="Your Reg Number"><br><br>
+  <button id="getIdBtn">Get ID</button>
+</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <marquee>Please ensure the information provided is accurate. False information will be disregarded.</marquee>
+
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p class="first-mode">Form submitted successfully!</p> 
+      <p class="first-mode">Form submitted successfully!</p>
       <p class="mode">You can now download your certificate.</p>
       <a id="downloadLink" class="modal-link">Download Your Certificate</a>
     </div>
   </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="reg.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="reg.js"></script>
 </body>
 </html>
